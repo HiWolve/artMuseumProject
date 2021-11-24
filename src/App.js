@@ -1,8 +1,8 @@
 import harvardArt from './data/harvardArt'
 import GalleryNavigation from './components/GalleryNavigation'
 import GalleryView from './components/GalleryView';
+import ImgRender from './components/ArtImageTile';
 import { Route, Switch } from 'react-router-dom'
-
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Switch>
         <Route path='/galleries/:galleryId'>
           <GalleryView galleries={harvardArt.records} />
+          <ImgRender galleries={harvardArt.records}/>
         </Route>
         <Route exact path='/'>
           <h2>Harvard Art Museum</h2>
